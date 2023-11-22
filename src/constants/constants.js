@@ -1,6 +1,33 @@
-const CONTRACT_ADDRESS = "0xa7c2cF809b8C31eCA5fb8EaC28592E3BF974f5b3";	// goerli network
+// const CONTRACT_ADDRESS = "0xa7c2cF809b8C31eCA5fb8EaC28592E3BF974f5b3";	// goerli network. Use this contract to check for voting end
+const CONTRACT_ADDRESS = "0x371FB7b585347F3b90b2DD089aF921c1AA1929BC";	// goerli network
 
 const CONTRACT_ABI = [
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			}
+		],
+		"name": "addCandidate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_candidateIndex",
+				"type": "uint256"
+			}
+		],
+		"name": "castVote",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
 	{
 		"inputs": [
 			{
@@ -18,17 +45,23 @@ const CONTRACT_ABI = [
 		"type": "constructor"
 	},
 	{
+		"anonymous": false,
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "_name",
-				"type": "string"
+				"indexed": true,
+				"internalType": "address",
+				"name": "voter",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "candidateIndex",
+				"type": "uint256"
 			}
 		],
-		"name": "addCandidate",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
+		"name": "VoteCast",
+		"type": "event"
 	},
 	{
 		"inputs": [
@@ -52,19 +85,6 @@ const CONTRACT_ABI = [
 			}
 		],
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_candidateIndex",
-				"type": "uint256"
-			}
-		],
-		"name": "castVote",
-		"outputs": [],
-		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -165,7 +185,10 @@ const CONTRACT_ABI = [
 	}
 ];
 
+const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1176756383245418568/J69lf6W62-ofKZNe6vrVK9EB4FwqHGFAK16H8rFZhX44PuHeNVuRrKvbFIJFUfoFGGQB";
+
 export {
     CONTRACT_ADDRESS,
-    CONTRACT_ABI
+    CONTRACT_ABI,
+    DISCORD_WEBHOOK_URL,
 }

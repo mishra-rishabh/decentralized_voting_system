@@ -4,16 +4,24 @@ import logo from "../vote.png"
 const Dashboard = (props) => {
     return (
         <div className="App">
+            {/* Displays the logo and Title */}
             <img src={logo} className="App-logo" alt="logo" />
             <h1>Decentralized Voting System</h1>
 
+            {/* Confirms that the user is connected to their MetaMask wallet */}
             <p>You Are Connected To Your Metamask Wallet</p>
+
+            {/* Displays the user's MetaMask account address */}
             <p className="connected">Account Address: {props.account}</p>
+
+            {/* Displays the remaining time for voting */}
             <p className="connected">Remaining Time: {props.remainingTime} seconds</p>
 
+            {/* Checks if the user has already casted their vote */}
             { props.canVote ?
                 (<p className="">You have already casted your vote!</p>) :
                 (<div>
+                    {/* Displays an input field for entering the candidate index number */}
                     <input
                         className="input-box"
                         type="number"
@@ -29,6 +37,7 @@ const Dashboard = (props) => {
             }
             
             <div>
+            {/* Creates a table to display the list of candidates and their vote counts */}
                 <table id="voteTable" className="content-table">
                     <thead>
                         <tr>

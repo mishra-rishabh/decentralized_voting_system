@@ -3,22 +3,19 @@
 }
 
 .App-logo {
-  height: 30vmin;
-  padding: 5rem 0rem 0rem 0rem;
+  height: 18vmin;
+  padding: 2rem 0rem 0rem 0rem;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    /* animation: App-logo-spin infinite 20s linear; */
     animation: zoom-in-zoom-out 2s ease infinite;
   }
 }
 
 .App-header {
-  /* background-color: #282c34; */
   background-color: white;
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +35,7 @@
   font-weight: bold;
   border: none;
   border-radius: 0.3rem;
-  padding: 1rem 4rem;
+  padding: 1rem 5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -52,6 +49,7 @@
   padding: 0.7rem 4.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .login-button:hover, .vote-button:hover {
@@ -65,21 +63,12 @@
   margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
-  /* font-family: montserrat; */
-  /* color: #2C3E50; */
-  /* font-size: 13px; */
 }
 
 .input-box:focus {
-  /* -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important; */
   border: 1px solid #007bff;
   outline-width: 0;
   transition: All 0.3s ease-in;
-  /* -webkit-transition: All 0.5s ease-in;
-  -moz-transition: All 0.5s ease-in;
-  -o-transition: All 0.5s ease-in; */
 }
 
 .connected {
@@ -89,21 +78,17 @@
 
 .content-table {
   border-collapse: collapse;
-  /* margin: 25px 0; */
   margin-top: 10px;
   font-size: 0.7em;
-  /* min-width: 1000px; */
   width: 100%;
   border-radius: 5px 5px 0 0;
-  /* overflow: hidden; */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 .content-table thead tr {
   background-color: #007bff;
   color: #ffffff;
-  /* text-align: left; */
-  /* font-weight: bold; */
+  font-size: 1em;
 }
 
 .content-table th,
@@ -112,7 +97,7 @@
 }
 
 .content-table tbody tr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
 }
 
 .content-table tbody tr:nth-of-type(even) {
@@ -120,13 +105,12 @@
 }
 
 .content-table tbody tr:last-of-type {
-  border-bottom: 2px solid #007bff;
+  border-bottom: 3px solid #007bff;
 }
 
-.content-table tbody tr.active-row {
-  /* font-weight: bold; */
+/* .content-table tbody tr.active-row {
   color: #007bff;
-}
+} */
 
 @keyframes zoom-in-zoom-out {
   0% {
