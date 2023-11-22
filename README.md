@@ -18,6 +18,10 @@ This project is a decentralized voting system built on the Ethereum blockchain. 
 * Node.js (Backend)
 * MetaMask
 
+## Contract Repository
+[Decentralized Voting Smart Contract](https://github.com/mishra-rishabh/voting_smart_contract)
+
+
 ### NOTE
 * To make things easy to understand all the constants and urls are made public and not stored in env file (ideally it should be in env file to make things more secure).
 * Referesh the application manually if votes are not updated even after transaction is confirmed on the blockchain.
